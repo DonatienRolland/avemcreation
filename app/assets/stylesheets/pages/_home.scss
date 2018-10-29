@@ -1,1 +1,10 @@
-// Specific CSS for your home-page
+.container-homepage{
+  padding: 125px;
+}
+
+
+@media screen and (max-width: 770px) {
+  .container-homepage{
+    padding: 20px;
+  }
+}
