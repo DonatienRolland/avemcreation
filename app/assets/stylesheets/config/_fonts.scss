@@ -17,42 +17,32 @@ $headers-font: 'Montserrat', "Raleway", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 h1{
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: 600;
+  font-weight: 500;
   color: $black;
   margin: 0 0 30px;
   text-shadow: -3px 3px 7px rgba(0,0,0,0.15);
 }
 
 h2{
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: $black;
   margin: 0;
   text-shadow: -3px 3px 7px rgba(0,0,0,0.10);
 }
 
 h3{
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 600;
-  color: $black;
-  margin: 0;
-}
-
-h4{
-  font-size: 18px;
-  line-height: 18px;
   font-weight: 500;
   color: $black;
   margin: 0;
 }
 
+h4{
+  font-weight: 400;
+  color: $black;
+  margin: 0;
+}
+
 p{
-  font-size: 16px;
-  line-height: 16px;
   font-weight: 300;
   color: $black;
   margin: 0;
@@ -60,7 +50,6 @@ p{
 
 .p2{
   font-size: 14px;
-  line-height: 14px;
   font-weight: 300;
   color: $black;
   margin: 0;
@@ -68,33 +57,33 @@ p{
 
 @media screen and (max-width: 770px) {
   h1{
-    font-size: 24px;
+    font-size: 24px !important;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
     margin: 0 0 30px;
     text-shadow: -3px 3px 7px rgba(0,0,0,0.15);
   }
 
   h2{
-    font-size: 22px;
+    font-size: 22px !important;
     line-height: 22px;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
     margin: 0;
     text-shadow: -3px 3px 7px rgba(0,0,0,0.10);
   }
 
   h3{
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: $black;
     margin: 0;
   }
 
   p{
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 14px;
     font-weight: 300;
     color: $black;
@@ -102,7 +91,7 @@ p{
   }
 
   .p2{
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 12px;
     font-weight: 300;
     color: $black;
