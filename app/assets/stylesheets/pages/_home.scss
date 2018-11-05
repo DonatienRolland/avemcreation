@@ -1,10 +1,33 @@
-.container-homepage{
-  padding: 125px;
+// .container-homepage{
+//   padding: 195px 125px 125px;
+// }
+
+.ecran{
+  min-height: 100vh;
+  padding: 195px 125px 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
+#vertical-tab-service{
+  .active{
+    color: $green;
+  }
+}
+
 @media screen and (max-width: 770px) {
-  .container-homepage{
-    padding: 20px;
+  .ecran{
+    padding: 70px 30px 20px;
+  }
+  #liste-defilement-auto h2::after{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 2px;
+    border: none;
+    margin: 0 0 0 15px;
+    background-color: $black;
   }
 }
