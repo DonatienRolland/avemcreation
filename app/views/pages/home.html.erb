@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-lg-2 col-xs-12" style="margin-top: 36px;">
       <h3 class="trait-vert no-margin" style="width: fit-content;">À propos</h3>
-      <h2 class="">On vous comprends</h2>
+      <h2 class="col-md-7 no-padding">On vous comprends</h2>
     </div>
     <div class="col-lg-10 col-xs-12">
       <hr class="trait-horizontal margin-bottom-30 margin-top-30-xs">
@@ -35,7 +35,7 @@
 </div>
 
 <div class="ecran" id="service">
-  <div class="row">
+  <div class="row" style="min-height: 300px;">
     <div class="col-lg-4 col-xs-12 margin-bottom-30-xs" id="vertical-tab-service">
       <h3 class="trait-vert no-margin" style="width: fit-content;">Services</h3>
       <p class="p2 margin-bottom-30 margin-top-15">Nous vous aidons à réaliser votre projet digital et graphique grâce à nos services.</p>
@@ -43,7 +43,7 @@
       <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="1">Identité de marque</h2>
       <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="2">Marketing digital</h2>
     </div>
-    <div id="carousel" class="col-lg-8 col-xs-12 row carousel slide" data-ride="carousel">
+    <div id="carousel_service" class="col-lg-8 col-xs-12 row carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
           <%= render 'site_internet' %>
@@ -61,10 +61,107 @@
   </div>
 </div>
 
-<div class="ecran" id="portofolio"></div>
+<div class="ecran" id="portofolio">
+  <div class="row">
+    <div class="col-lg-2 col-xs-12" style="margin-top: 36px;">
+      <h3 class="trait-vert no-margin" style="width: fit-content;">Portofolio</h3>
+      <h2 class="col-md-7 no-padding">Fait avec passion</h2>
+    </div>
+    <div id="carousel_portofolio" class="col-lg-10 col-xs-12 row carousel carousel-multi slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item row active">
+          <div class="green-background col-md-4" style="height: 100px;"><h2>1</h2></div>
+        </div>
+
+        <div class="item row">
+          <div class="green-background col-md-4" style="height: 100px;"><h2>2</h2></div>
+        </div>
+
+        <div class="item row">
+          <div class="green-background col-md-4" style="height: 100px;"><h2>3</h2></div>
+        </div>
+
+        <div class="item row">
+          <div class="green-background col-md-4" style="height: 100px;"><h2>4</h2></div>
+        </div>
+
+        <div class="item row">
+          <div class="green-background col-md-4" style="height: 100px;"><h2>5</h2></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<div class="ecran green-background" id="contact"></div>
+<div class="ecran green-background" id="contact">
+  <form class="form-horizontal col-xs-12 col-md-4 col-md-offset-4">
+    <!-- <fieldset> -->
 
+    <!-- Text input name-->
+      <div class="form-group">
+        <label class="control-label" for="contact-form-name">Nom</label>
+        <div>
+          <input id="contact-form-name" name="contact-form-name" type="text" class="form-control input-md" required="true">
+        </div>
+      </div>
 
-<hr style="height: 200vh; width: 100px; background-color: blue">
+    <!-- Text input mail-->
+      <div class="form-group">
+        <label class="control-label" for="contact-form-mail">Mail</label>
+        <div>
+        <input id="contact-form-mail" name="contact-form-mail" type="text" placeholder="" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+    <!-- Text input comment-->
+      <div class="form-group">
+        <label class="control-label" for="contact-form-comment">Commentaire(s)</label>
+        <div>
+        <input id="contact-form-comment" name="contact-form-comment" type="text" placeholder="" class="form-control input-md">
+
+        </div>
+      </div>
+
+    <!-- Multiple Checkboxes purpose-->
+      <div class="form-group">
+        <label class="control-label" for="contact-form-purpose">Je cherche à :</label>
+        <div>
+        <div class="checkbox">
+          <label for="contact-form-purpose-0">
+            <input type="checkbox" name="contact-form-purpose" id="contact-form-purpose-0" value="1">
+            Refondre mon site web
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="contact-form-purpose-1">
+            <input type="checkbox" name="contact-form-purpose" id="contact-form-purpose-1" value="1">
+            Créer l'identité de mon entreprise
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="contact-form-purpose-2">
+            <input type="checkbox" name="contact-form-purpose" id="contact-form-purpose-2" value="1">
+            Développer une plateforme web
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="contact-form-purpose-3">
+            <input type="checkbox" name="contact-form-purpose" id="contact-form-purpose-3" value="1">
+            Autres
+          </label>
+        </div>
+        </div>
+      </div>
+
+    <!-- Button submit-->
+      <div class="form-group">
+        <div>
+          <button id="contact-form-submit" name="contact-form-submit" class="btn btn-success">Contacter</button>
+        </div>
+      </div>
+
+    <!-- </fieldset> -->
+  </form>
+</div>

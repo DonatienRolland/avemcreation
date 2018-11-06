@@ -68,4 +68,49 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: none !default;
 
+$btn-success-border:  white !default;
+
+//** `<input>` background color
+$input-bg:      $green !default;
+//** Text color for `<input>`s
+$input-color:   white !default;
+//** `<input>` border color
+$input-border:  white !default;
+//** Border color for inputs on focus
+$input-border-focus:             darken($input-border, 15%) !default;
+//** Placeholder text color
+$input-color-placeholder:        darken($input-color, 15%) !default;
+
+
 // Override other variables below!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
