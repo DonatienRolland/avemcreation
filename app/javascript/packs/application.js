@@ -6,6 +6,8 @@ import '../components/listeDefilementAuto';
 
 import '../components/smoothScroll';
 
+import '../components/carouselPortofolio';
+
 import { openOnglet } from '../components/toggableVerticalTabs';
 openOnglet();
 
