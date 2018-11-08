@@ -8,6 +8,10 @@ import '../components/smoothScroll';
 
 import '../components/carouselPortofolio';
 
+import '../components/dynamicNavbar';
+
+import '../components/forceScroll';
+
 import { openOnglet } from '../components/toggableVerticalTabs';
 openOnglet();
 
