@@ -5,9 +5,10 @@
 .ecran{
   min-height: 100vh;
   padding: 195px 125px 125px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  > div{
+    height: calc(100vh - 320px);
+    display: flex;
+  }
 }
 
 

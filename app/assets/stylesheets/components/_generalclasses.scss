@@ -220,8 +220,11 @@
     transform: rotate(90deg);
   }
 
-
 // Text
+  .white-space{
+    white-space: pre-wrap;
+  }
+
   .capitalize{
     text-transform: capitalize;
   }

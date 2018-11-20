@@ -1,11 +1,5 @@
 <%= render 'shared/btn_decouvrir_avem' %>
 
-<div class="btn-group" style="position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); z-index: 100">
-  <button id="haut" class="btn btn-success">Haut</button>
-  <button id="bas" class="btn btn-success">Bas</button>
-</div>
-
-
 <div class="ecran relative" id="home">
   <h1 class="green margin-bottom-30 no-margin">Entre dans un collectif qui te comprends pour</h1>
 
@@ -41,12 +35,14 @@
 
 <div class="ecran" id="service">
   <div class="row" style="min-height: 300px;">
-    <div class="col-lg-4 col-xs-12 margin-bottom-30-xs" id="vertical-tab-service">
+    <div class="col-lg-4 col-xs-12 margin-bottom-30-xs align-center" id="vertical-tab-service">
       <h3 class="trait-vert no-margin" style="width: fit-content;">Services</h3>
       <p class="p2 margin-bottom-30 margin-top-15">Nous vous aidons à réaliser votre projet digital et graphique grâce à nos services.</p>
-      <h2 class="indicateur pointer active" data-target="#carousel" data-slide-to="0">Site internet & application</h2>
-      <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="1">Identité de marque</h2>
-      <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="2">Marketing digital</h2>
+      <div class="carousel-indicators">
+          <h2 data-target="#carousel_service" data-slide-to="0" class="active">Site internet & application</h2>
+          <h2 data-target="#carousel_service" data-slide-to="1" class="">Identité de marque</h2>
+          <h2 data-target="#carousel_service" data-slide-to="2" class="">Marketing digital</h2>
+      </div>
     </div>
     <div id="carousel_service" class="col-lg-8 col-xs-12 row carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -55,11 +51,11 @@
         </div>
 
         <div class="item">
-          ZUT
+          <%= render 'identite_marque' %>
         </div>
 
         <div class="item">
-          CACA
+          <%= render 'marketing_digital' %>
         </div>
       </div>
     </div>
@@ -68,20 +64,11 @@
 
 <div class="ecran" id="portofolio">
   <div class="row">
-    <div class="col-lg-2 col-xs-12" style="margin-top: 36px;">
+    <div class="col-lg-2 col-xs-12 align-center" style="margin-top: 36px;">
       <h3 class="trait-vert no-margin" style="width: fit-content;">Portofolio</h3>
       <h2 class="col-md-7 no-padding">Fait avec passion</h2>
     </div>
 
-<!--     <div class="owl-carousel col-lg-10 col-xs-12 row no-padding">
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-      <div> <%= render "shared/item_portofolio" %> </div>
-    </div> -->
 
     <div id="carousel_portofolio" class="col-lg-10 col-xs-12 row no-padding carousel carousel-multi slide">
        <!-- data-ride="carousel" -->
