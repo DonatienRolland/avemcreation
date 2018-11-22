@@ -3,14 +3,53 @@
 // }
 
 .ecran{
-  min-height: 100vh;
+  height: 100vh;
   padding: 195px 125px 125px;
   > div{
     height: calc(100vh - 320px);
-    display: flex;
+    // display: flex;
   }
 }
 
+.menu-service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+// Delete CSS from carousel-indicators
+  .carousel_service-indicators{
+    position: initial;
+    bottom: unset;
+    left: unset;
+    z-index: unset;
+    width: unset;
+    margin-left: unset;
+    padding-left: unset;
+    list-style: none;
+    text-align: unset;
+    li{
+      display: unset;
+      width: unset;
+      height: unset;
+      margin: unset;
+      text-indent: unset;
+      border: none;
+      border-radius: unset;
+      cursor: pointer;
+      background-color: unset;
+    }
+    .active{
+      margin: unset;
+      width: unset;
+      height: unset;
+      background-color: $green;
+      h2{
+        color: $green;
+      }
+    }
+  }
 
 #vertical-tab-service{
   .active{
@@ -20,15 +59,17 @@
 
 @media screen and (max-width: 770px) {
   .ecran{
+    height: unset;
+    margin-top: 25vh;
+    min-height: 100vh;
     padding: 70px 30px 20px;
+    > div {
+      height: unset;
+      min-height: calc(100vh - 90px);
+    }
   }
-  #liste-defilement-auto h2::after{
-    content: "";
-    position: absolute;
-    height: 24px;
-    width: 2px;
-    border: none;
-    margin: 0 0 0 15px;
-    background-color: $black;
+  .menu-service{
+    display: block;
+    height: unset;
   }
 }

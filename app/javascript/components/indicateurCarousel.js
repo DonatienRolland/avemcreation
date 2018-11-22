@@ -15,10 +15,10 @@
       event.currentTarget.classList.add("active");
     }
     // Get the good div clicked
-    let tablinkAll = document.querySelectorAll(".indicateur");
-    tablinkAll.forEach((tablink) => {
-      tablink.addEventListener('click', actionLink)
-    })
+    let tablinkAll = document.querySelector(".carousel-indicators").getElementsByTagName("li");
+    for (var i = 0 ; i < tablinkAll.length ; i++) {
+      tablinkAll[i].addEventListener('click', actionLink)
+    }
   }
 
 export { changeColor };
