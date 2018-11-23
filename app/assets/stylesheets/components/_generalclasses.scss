@@ -13,7 +13,6 @@
     padding-top: 12.5px;
   }
 
-
 // Cercle
   .cercle{
     border-radius: 100%;
@@ -88,6 +87,11 @@
 
   .float-right{
     float: right;
+  }
+
+// Focus
+  *:focus{
+    outline: none !important;
   }
 
 // Grid
@@ -257,4 +261,3 @@
   .align-center{ // Parent doit avoir display flex/grid
     align-self: center;
   }
-

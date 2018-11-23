@@ -1,12 +1,20 @@
+var calculEltHauteur = require('../components/calculEltHauteur').calculEltHauteur
+
 var listeDefilement = document.getElementById("liste-defilement-auto");
 var itemsDefilant = listeDefilement.getElementsByClassName("item-defilant");
 var items = listeDefilement.getElementsByClassName("item");
 var j = 0
+var hauteurAllItem = 0
+for (var i=0 ; i < items.length-1; i++){
+  hauteurAllItem = hauteurAllItem + calculEltHauteur(items[i]);
+}
 
 setInterval(function(){
 
 var item = items[j];
-var hauteurItem = parseInt(window.getComputedStyle(item).marginBottom, 10) + item.offsetHeight + parseInt(window.getComputedStyle(item).marginTop, 10) || parseInt(item.currentStyle.marginBottom, 10) + item.offsetHeight + parseInt(item.currentStyle.marginTop, 10)
+var hauteurItem = calculEltHauteur(item)
+
+
 
   for (var i = 0; i < items.length; i++){
     items[i].classList.remove("active")
@@ -27,7 +35,7 @@ var hauteurItem = parseInt(window.getComputedStyle(item).marginBottom, 10) + ite
     j += 1;
   } else {
     for (var i = 0; i < itemsDefilant.length ; i++) {
-      itemsDefilant[i].style.top = parseInt(itemsDefilant[i].style.top, 10) - ( (items.length-1) * hauteurItem ) + "px";
+      itemsDefilant[i].style.top = parseInt(itemsDefilant[i].style.top, 10) - hauteurAllItem  + "px";
     }
     j = 0
   }
