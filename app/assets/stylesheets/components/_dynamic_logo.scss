@@ -1,0 +1,8 @@
+.dynamic-logo{
+  display: grid;
+}
+.dynamic-logo-item{
+  grid-row: -1 / 1;
+  grid-column: -1 / 1;
+  overflow: hidden;
+}

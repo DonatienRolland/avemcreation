@@ -1,26 +1,27 @@
-<%#= render "views/shared/btn_decrouvrir_avem" %>
 <%= render 'shared/btn_decouvrir_avem' %>
 
-<div class="ecran relative" id="home">
-  <h1 class="green margin-bottom-30 no-margin">Entre dans un collectif qui te comprends pour</h1>
+<div class="ecran relative no-margin" id="home">
+  <div class="flex" style="flex-direction: column; justify-content: center;">
+    <h1 class="green margin-bottom-30 no-margin">Entre dans un collectif qui te comprends pour</h1>
 
-  <div class="relative" id="liste-defilement-auto">
-    <hr class="trait-horizontal absolute" style="transform: translateY(-50%); top: 13px;">
-    <hr class="trait-vertical absolute hidden-xs" style="top: 0px; left: 50%;">
-    <h2 class="margin-left-60 margin-bottom-15 no-margin" data-slide-to="0">ton site web,</h2>
-    <h2 class="margin-left-60 margin-bottom-15 no-margin" data-slide-to="1">ton identité de marque,</h2>
-    <h2 class="margin-left-60 margin-bottom-15 no-margin" data-slide-to="2">ton marketing digital,</h2>
-    <h2 class="margin-left-60 margin-bottom-15 no-margin" data-slide-to="3">ta production de vidéo</h2>
+    <div id="liste-defilement-auto" data-interval="3000">
+      <hr class="item-defilant trait-horizontal" style="transform: translateY(-50%); top: 13px;">
+      <hr class="item-defilant trait-vertical hidden-xs" style="top: 0px; left: 50%;">
+      <h2 class="item active margin-left-60 margin-bottom-15 no-margin">ton site web,</h2>
+      <h2 class="item margin-left-60 margin-bottom-15 no-margin">ton identité de marque,</h2>
+      <h2 class="item margin-left-60 margin-bottom-15 no-margin">ton marketing digital,</h2>
+      <h2 class="item margin-left-60 margin-bottom-15 no-margin">ta production de vidéo</h2>
+    </div>
+
+    <a href="#about" class="navbar-wagon-item"><p class="scroll hidden-xs">scroll</p></a>
   </div>
-
-  <p class="scroll hidden-xs">scroll</p>
 </div>
 
 <div class="ecran" id="about">
   <div class="row">
     <div class="col-lg-2 col-xs-12" style="margin-top: 36px;">
       <h3 class="trait-vert no-margin" style="width: fit-content;">À propos</h3>
-      <h2 class="col-md-7 no-padding">On vous comprends</h2>
+      <h2 class="col-md-7 no-padding">Liberté, Agilité</h2>
     </div>
     <div class="col-lg-10 col-xs-12">
       <hr class="trait-horizontal margin-bottom-30 margin-top-30-xs">
@@ -35,26 +36,28 @@
 </div>
 
 <div class="ecran" id="service">
-  <div class="row" style="min-height: 300px;">
-    <div class="col-lg-4 col-xs-12 margin-bottom-30-xs" id="vertical-tab-service">
+  <div class="row carousel slide" id="carousel_service" data-ride="carousel">
+    <div class="col-lg-4 col-xs-12 margin-bottom-30-xs align-center menu-service">
       <h3 class="trait-vert no-margin" style="width: fit-content;">Services</h3>
-      <p class="p2 margin-bottom-30 margin-top-15">Nous vous aidons à réaliser votre projet digital et graphique grâce à nos services.</p>
-      <h2 class="indicateur pointer active" data-target="#carousel" data-slide-to="0">Site internet & application</h2>
-      <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="1">Identité de marque</h2>
-      <h2 class="indicateur pointer" data-target="#carousel" data-slide-to="2">Marketing digital</h2>
+      <p class="p2 margin-top-15">Nous vous aidons à réaliser votre projet digital et graphique grâce à nos services.</p>
+      <ol class="carousel-indicators carousel_service-indicators">
+          <li data-target="#carousel_service" data-slide-to="0" class="indicateur active"><h2>Site internet & application</h2></li>
+          <li data-target="#carousel_service" data-slide-to="1" class="indicateur"><h2>Identité de marque</h2></li>
+          <li data-target="#carousel_service" data-slide-to="2" class="indicateur"><h2>Marketing digital</h2></li>
+      </ol>
     </div>
-    <div id="carousel_service" class="col-lg-8 col-xs-12 row carousel slide" data-ride="carousel">
+    <div class="col-lg-8 col-xs-12 row" style="padding-top: 50px;">
       <div class="carousel-inner">
         <div class="item active">
           <%= render 'site_internet' %>
         </div>
 
         <div class="item">
-          ZUT
+          <%= render 'identite_marque' %>
         </div>
 
         <div class="item">
-          CACA
+          <%= render 'marketing_digital' %>
         </div>
       </div>
     </div>
@@ -63,32 +66,86 @@
 
 <div class="ecran" id="portofolio">
   <div class="row">
-    <div class="col-lg-2 col-xs-12" style="margin-top: 36px;">
+    <div class="col-lg-2 col-xs-12 align-center" style="margin-top: 36px;">
       <h3 class="trait-vert no-margin" style="width: fit-content;">Portofolio</h3>
       <h2 class="col-md-7 no-padding">Fait avec passion</h2>
     </div>
-    <div id="carousel_portofolio" class="col-lg-10 col-xs-12 row carousel carousel-multi slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="item row active">
-          <div class="green-background col-md-4" style="height: 100px;"><h2>1</h2></div>
-        </div>
 
-        <div class="item row">
-          <div class="green-background col-md-4" style="height: 100px;"><h2>2</h2></div>
-        </div>
-
-        <div class="item row">
-          <div class="green-background col-md-4" style="height: 100px;"><h2>3</h2></div>
-        </div>
-
-        <div class="item row">
-          <div class="green-background col-md-4" style="height: 100px;"><h2>4</h2></div>
-        </div>
-
-        <div class="item row">
-          <div class="green-background col-md-4" style="height: 100px;"><h2>5</h2></div>
-        </div>
+    <div class="col-lg-10 col-xs-12 row no-padding no-margin-xs" id="carousel_portofolio" style="overflow-x: hidden;">
+      <div class="item">
+        <%= render "shared/item_portofolio" %>
       </div>
+      <div class="item">
+        <%= render "shared/item_portofolio" %>
+      </div>
+      <div class="item">
+        <%= render "shared/item_portofolio" %>
+      </div>
+      <div class="item">
+        <%= render "shared/item_portofolio" %>
+      </div>
+      <div class="item">
+        <%= render "shared/item_portofolio" %>
+      </div>
+    </div>
+
+
+ <!--    <div id="carousel_portofolio" class="col-lg-10 col-xs-12 row no-padding carousel carousel-multi slide"> -->
+       <!-- data-ride="carousel" -->
+      <!-- <div class="carousel-inner" role="listbox">
+        <div class="item row active">
+          <div class="highlighted col-md-4">
+            <div class="image-portofolio">
+              <img src="assets/photo_exemple.JPG" alt="">
+            </div>
+            <h3 style="text-align: center;">Nom du projet</h3>
+            <p style="text-align: center;">Développers, designers, chargé de projet,</p>
+          </div>
+        </div>
+
+        <div class="item row">
+          <#%= render "shared/item_portofolio" %>
+        </div>
+
+        <div class="item row">
+          <div class="highlighted col-md-4">
+            <div class="image-portofolio">
+              <img src="assets/photo_exemple.JPG" alt="">
+            </div>
+            <h3 style="text-align: center;">Nom du projet</h3>
+            <p style="text-align: center;">Développers, designers, chargé de projet,</p>
+          </div>
+        </div>
+
+        <div class="item row">
+          <div class="highlighted col-md-4">
+            <div class="image-portofolio">
+              <img src="assets/photo_exemple.JPG" alt="">
+            </div>
+            <h3 style="text-align: center;">Nom du projet</h3>
+            <p style="text-align: center;">Développers, designers, chargé de projet,</p>
+          </div>
+        </div>
+
+        <div class="item row">
+          <div class="highlighted col-md-4">
+            <div class="image-portofolio">
+              <img src="assets/photo_exemple.JPG" alt="">
+            </div>
+            <h3 style="text-align: center;">Nom du projet</h3>
+            <p style="text-align: center;">Développers, designers, chargé de projet,</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- Controls -->
+        <!-- <a class="left carousel-control" href="#carousel_portofolio" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel_portofolio" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
     </div>
   </div>
 </div>

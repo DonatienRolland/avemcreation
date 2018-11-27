@@ -13,7 +13,6 @@
     padding-top: 12.5px;
   }
 
-
 // Cercle
   .cercle{
     border-radius: 100%;
@@ -88,6 +87,11 @@
 
   .float-right{
     float: right;
+  }
+
+// Focus
+  *:focus{
+    outline: none !important;
   }
 
 // Grid
@@ -194,6 +198,11 @@
     }
   }
 
+// Overflow
+  .overflow-hidden{
+    overflow: hidden;
+  }
+
 // Padding
   .no-padding{
     padding: unset !important;
@@ -215,8 +224,11 @@
     transform: rotate(90deg);
   }
 
-
 // Text
+  .white-space{
+    white-space: pre-wrap;
+  }
+
   .capitalize{
     text-transform: capitalize;
   }
@@ -250,3 +262,7 @@
     align-self: center;
   }
 
+
+.item{
+  transition: 0.3s;
+}

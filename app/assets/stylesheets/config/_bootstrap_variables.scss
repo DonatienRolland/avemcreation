@@ -7,6 +7,7 @@
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $body-bg:                 white;
+$text-color:              $black !default;
 $font-size-base: 16px;
 $font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
 $font-size-h2:            floor(($font-size-base * 1.5)) !default; // ~24px
