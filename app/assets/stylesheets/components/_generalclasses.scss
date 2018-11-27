@@ -261,3 +261,8 @@
   .align-center{ // Parent doit avoir display flex/grid
     align-self: center;
   }
+
+
+.item{
+  transition: 0.3s;
+}
