@@ -1,6 +1,6 @@
 // Mouvement fluide :
 $(function () {
-  $('.navbar-wagon-item').on('click', function(e) {
+  $('.navbar-wagon-link').on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
     $('html, body').animate({

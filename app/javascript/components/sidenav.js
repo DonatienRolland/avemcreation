@@ -1,5 +1,5 @@
 var openNav = document.getElementById("openNav");
-var closeNav = document.getElementById("closeNav");
+var closeNav = document.getElementById("mySidenav").getElementsByTagName("a");
 
 /* Open the sidenav */
 openNav.addEventListener("click", function() {
@@ -7,8 +7,9 @@ openNav.addEventListener("click", function() {
 })
 
 /* Close/hide the sidenav */
-closeNav.addEventListener("click", function() {
-  document.getElementById("mySidenav").style.width = "0";
-})
-
+for( var i = 0; i < closeNav.length; i++ ){
+  closeNav[i].addEventListener("click", function() {
+    document.getElementById("mySidenav").style.width = "0";
+  })
+}
 
