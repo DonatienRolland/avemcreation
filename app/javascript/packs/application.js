@@ -2,7 +2,7 @@ import "bootstrap";
 
 import '../components/sidenav';
 
-import '../components/listeDefilementAuto';
+// import '../components/listeDefilementAuto';
 
 import '../components/smoothScroll';
 
@@ -20,8 +20,14 @@ openOnglet();
 import { changeColor } from '../components/indicateurCarousel';
 changeColor();
 
+import { loadDynamicBannerText } from '../components/typedText';
+loadDynamicBannerText();
+
 // import { calculEltHauteur } from '../components/calculEltHauteur';
 // calculEltHauteur();
+
+// import { scrollStop } from '../components/scrollStop';
+// scrollStop();
 
 
 // import { closeNav } from '../components/sidenav';

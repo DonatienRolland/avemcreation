@@ -11,7 +11,8 @@
   }
 }
 
-.menu-service{
+
+.menu-ecran{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,12 +52,6 @@
     }
   }
 
-#vertical-tab-service{
-  .active{
-    color: $green;
-  }
-}
-
 @media screen and (max-width: 770px) {
   .ecran{
     height: unset;
@@ -68,7 +63,19 @@
       min-height: calc(100vh - 90px);
     }
   }
-  .menu-service{
+  #contact {
+    height: 100vh;
+    min-height: 600px;
+    > div {
+      height: calc(100vh - 90px);
+      min-height: 510px;
+      .menu-ecran{
+        display: flex;
+        height: 100%;
+      }
+    }
+  }
+  .menu-ecran{
     display: block;
     height: unset;
   }
