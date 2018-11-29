@@ -14,12 +14,7 @@ $font-size-h2:            floor(($font-size-base * 1.5)) !default; // ~24px
 $font-size-h3:            ceil(($font-size-base * 1.25)) !default; // ~20px
 $font-size-h4:            ceil(($font-size-base * 1.125)) !default; // ~18px
 // $font-size-p:            ceil(($font-size-base * 1.6)) !default; // ~16px
-$font-weight-h1:            500 !default;
-$font-weight-h2:            500 !default;
-$font-weight-h3:            500 !default;
-$font-weight-h4:            400 !default;
-$font-weight-p:             300 !default;
-
+$headings-font-weight:      600 !default;
 
 // Colors
 $gray-base:       $gray;

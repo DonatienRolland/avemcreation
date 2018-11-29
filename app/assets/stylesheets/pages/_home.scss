@@ -11,6 +11,37 @@
   }
 }
 
+#service{
+  .list-ligne li{
+    font-weight: 500;
+  }
+}
+
+#contact{
+  label{
+    font-size: 14px;
+  }
+  #contact-form-submit{
+    border: 3px solid white;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  #contact-form-submit:hover{
+    background-color: white;
+    color: $green;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding : 0 125px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
 .menu-ecran{
   display: flex;
@@ -67,8 +98,8 @@
     height: 100vh;
     min-height: 600px;
     > div {
-      height: calc(100vh - 90px);
-      min-height: 510px;
+      padding-top: 20px;
+      min-height: 447px;
       .menu-ecran{
         display: flex;
         height: 100%;
@@ -78,5 +109,10 @@
   .menu-ecran{
     display: block;
     height: unset;
+  }
+  #contact footer{
+    padding: 0;
+    display: block;
+    margin: 0 0 20px;
   }
 }
