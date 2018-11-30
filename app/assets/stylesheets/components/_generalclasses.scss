@@ -1,0 +1,284 @@
+// Bordure
+  .bordure-droite{
+    border-right: 1px solid $gray;
+  }
+  .bordure-haut-bas{
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+  }
+  .padding-left{
+    padding-left: 20px;
+  }
+  .padding-top{
+    padding-top: 12.5px;
+  }
+
+// Cercle
+  .cercle{
+    border-radius: 100%;
+  }
+
+// Color
+  .black{
+    color: $black
+  }
+  .gray{
+    color: $gray;
+  }
+  .gray-background{
+    background-color: $gray !important;
+  }
+  .green{
+    color: $green !important;
+  }
+  .green-background{
+    background-color: $green !important;
+  }
+  .red{
+    color: $red;
+  }
+  .red-background{
+    background-color: $red !important;
+  }
+  .red-border{
+    border-color: $red !important;
+  }
+  .white{
+    color: white;
+  }
+
+// Column-count
+  .column-count-2{
+    column-count: 2;
+    column-gap: 70px;
+  }
+  @media screen and (max-width: 770px) {
+    .column-count-xs-1{
+      column-count: 1
+    }
+  }
+
+// Cursor
+  .pointer{
+    cursor: pointer;
+  }
+
+// Flex
+  .flex{
+    display: flex;
+  }
+
+  .column{
+    flex-direction: column;
+  }
+
+  .space-between{
+    justify-content: space-between;
+  }
+
+  .space-between-vertical{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+// Float
+  .float-left{
+    float: left;
+  }
+
+  .float-right{
+    float: right;
+  }
+
+// Focus
+  *:focus{
+    outline: none !important;
+  }
+
+// Grid
+  .grid{
+    display: grid;
+  }
+  .grid-column{
+    grid-auto-flow: column;
+  }
+  .grid-col-span-2{
+    grid-column: span 2;
+  }
+
+// Height
+  .h100{
+    height: 100%;
+  }
+
+// Ligne
+  .ligne-vertical{
+    border: none;
+    width: 1px;
+    height: 100%;
+    background-color: $gray;
+  }
+  .ligne-horizontal{
+    border: none;
+    background-color: $gray;
+    height: 1px;
+    width: 100%
+  }
+
+// Margin
+  .margin-auto{
+    margin: auto;
+  }
+  .no-margin{
+    margin: 0 !important;
+  }
+  .margin-bottom-60{
+    margin-bottom: 60px !important
+  }
+  .margin-top-60{
+    margin-top: 60px !important
+  }
+  .margin-left-60{
+    margin-left: 60px !important
+  }
+  .margin-right-60{
+    margin-right: 60px !important
+  }
+  .margin-bottom-45{
+    margin-bottom: 45px !important
+  }
+  .margin-top-45{
+    margin-top: 45px !important
+  }
+  .margin-left-45{
+    margin-left: 45px !important
+  }
+  .margin-right-45{
+    margin-right: 45px !important
+  }
+  .margin-bottom-30{
+    margin-bottom: 30px !important
+  }
+  .margin-top-30{
+    margin-top: 30px !important
+  }
+  .margin-left-30{
+    margin-left: 30px !important
+  }
+  .margin-right-30{
+    margin-right: 30px !important
+  }
+  .margin-bottom-15{
+    margin-bottom: 15px !important
+  }
+  .margin-top-15{
+    margin-top: 15px !important
+  }
+  .margin-left-15{
+    margin-left: 15px !important
+  }
+  .margin-right-15{
+    margin-right: 15px !important
+  }
+
+  @media screen and (max-width: 770px){
+    .no-margin-xs{
+      margin: 0 !important;
+    }
+    .margin-bottom-30-xs{
+      margin-bottom: 30px !important
+    }
+    .margin-top-30-xs{
+      margin-top: 30px !important
+    }
+    .margin-left-30-xs{
+      margin-left: 30px !important
+    }
+    .margin-right-30-xs{
+      margin-right: 30px !important
+    }
+    .margin-bottom-15-xs{
+      margin-bottom: 15px !important
+    }
+    .margin-top-15-xs{
+      margin-top: 15px !important
+    }
+    .margin-left-15-xs{
+      margin-left: 15px !important
+    }
+    .margin-right-15-xs{
+      margin-right: 15px !important
+    }
+  }
+
+// Overflow
+  .overflow-hidden{
+    overflow: hidden;
+  }
+
+// Padding
+  .no-padding{
+    padding: unset !important;
+  }
+
+// Position
+  .relative{
+    position: relative;
+  }
+  .absolute{
+    position: absolute;
+  }
+
+// Rotate
+  .rotate-90{
+    transform: rotate(-90deg);
+  }
+  .rotate90{
+    transform: rotate(90deg);
+  }
+  .rotate180{
+    transform: rotate(180deg);
+  }
+
+// Text
+  .white-space{
+    white-space: pre-wrap;
+  }
+
+  .capitalize{
+    text-transform: capitalize;
+  }
+
+  .uppercase{
+    text-transform: uppercase;
+  }
+
+  .center-text{
+    display: grid;
+    place-items: center center;
+  }
+
+  .absolute-center-vertical{ // Parent doit avoir position relative
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .absolute-center-horizontal{ // Parent doit avoir position relative
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .absolute-center{ // Parent doit avoir position relative
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .align-center{ // Parent doit avoir display flex/grid
+    align-self: center;
+  }
+
+
+.item{
+  transition: 0.3s;
+}

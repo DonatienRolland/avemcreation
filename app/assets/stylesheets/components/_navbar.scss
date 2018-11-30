@@ -1,10 +1,38 @@
 /* Main navbar */
+.navbar-white-bg{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 125px 125px 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+}
+@media screen and (max-width: 770px) {
+  .navbar-white-bg{
+    left: 0;
+    transform: none;
+    padding: 20px 30px;
+    width: 100%;
+  }
+}
+
+#navbar-white-bg-bottom{
+  position: absolute;
+  z-index: 5;
+  height: 230px; // 195px: hauteur de la navbar; 230px: marge de manoeuvre
+  width: 100%;
+  top: 400vh;
+  transform: translateY(-100%);
+  background-color: white;
+}
+
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: transparent;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +41,11 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+}
+@media screen and (max-width: 770px) {
+  .navbar-wagon-brand img{
+    height: 35px;
+  }
 }
 
 /* User Avatar */
@@ -26,22 +59,22 @@
 .navbar-wagon-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  margin: 0 20px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $black;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
   text-decoration: none;
 }
 

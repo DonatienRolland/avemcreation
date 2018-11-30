@@ -1,0 +1,26 @@
+.trait-vert{
+  position: relative;
+  z-index: 1;
+}
+
+.trait-vert:after{
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  bottom: -3px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: $green;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.trait-vert--hover:hover{
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.trait-vert--hover:hover:after{
+  height: calc(100% + 6px);
+}

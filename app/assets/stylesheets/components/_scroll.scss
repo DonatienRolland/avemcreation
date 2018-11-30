@@ -1,0 +1,37 @@
+.scroll{
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+.scroll::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  z-index: -1;
+  width: 5px;
+  height: 85%;
+  background-color: $green;
+  // transition: 0.5s
+}
+
+.scroll:hover:before{
+  animation-name: scroll-anim;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes scroll-anim {
+  0%   {width: 5px; top: -5px; height: 85%;}
+  25%  {width: 11px; top: -5px; height: 85%;}
+  50%  {width: 11px; top: calc(85% - 5px); height: 0;}
+  // 75%  {width: 11px; top: calc(85% - 5px); height: 0;}
+  100% {width: 11px; top: calc(85% - 5px); height: 0;}
+}

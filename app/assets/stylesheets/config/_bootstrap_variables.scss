@@ -6,8 +6,15 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
-$font-size-base: 18px;
+$body-bg:                 white;
+$text-color:              $black !default;
+$font-size-base: 16px;
+$font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
+$font-size-h2:            floor(($font-size-base * 1.5)) !default; // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.25)) !default; // ~20px
+$font-size-h4:            ceil(($font-size-base * 1.125)) !default; // ~18px
+// $font-size-p:            ceil(($font-size-base * 1.6)) !default; // ~16px
+$headings-font-weight:      600 !default;
 
 // Colors
 $gray-base:       $gray;
@@ -50,4 +57,56 @@ $border-radius-small: 2px;
   display: block;
 }
 
+//** Global textual link color.
+$link-color:            $green !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+
+$btn-success-border:  white !default;
+
+//** `<input>` background color
+$input-bg:      $green !default;
+//** Text color for `<input>`s
+$input-color:   white !default;
+//** `<input>` border color
+$input-border:  white !default;
+//** Border color for inputs on focus
+$input-border-focus:             darken($input-border, 15%) !default;
+//** Placeholder text color
+$input-color-placeholder:        darken($input-color, 15%) !default;
+
+
 // Override other variables below!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
