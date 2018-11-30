@@ -16,11 +16,11 @@
   transition: 0.5s;
 }
 
-.trait-vert:hover{
+.trait-vert--hover:hover{
   color: $black;
   text-decoration: none;
   cursor: pointer;
 }
-.trait-vert:hover:after{
+.trait-vert--hover:hover:after{
   height: calc(100% + 6px);
 }

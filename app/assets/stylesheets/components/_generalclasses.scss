@@ -29,7 +29,7 @@
     background-color: $gray !important;
   }
   .green{
-    color: $green;
+    color: $green !important;
   }
   .green-background{
     background-color: $green !important;
@@ -50,7 +50,7 @@
 // Column-count
   .column-count-2{
     column-count: 2;
-    vertical-align: top;
+    column-gap: 70px;
   }
   @media screen and (max-width: 770px) {
     .column-count-xs-1{

@@ -15,10 +15,10 @@
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
         <!-- Links when logged in -->
-        <%= link_to "À propos", "#about", class: "navbar-wagon-item navbar-wagon-link trait-vert" %>
-        <%= link_to "Services", "#service", class: "navbar-wagon-item navbar-wagon-link trait-vert" %>
-        <%= link_to "Portofolio", "#portofolio", class: "navbar-wagon-item navbar-wagon-link trait-vert" %>
-        <%= link_to "Contact", "#contact", class: "navbar-wagon-item navbar-wagon-link trait-vert" %>
+        <%= link_to "À propos", "#about", class: "navbar-wagon-item navbar-wagon-link trait-vert trait-vert--hover" %>
+        <%= link_to "Services", "#service", class: "navbar-wagon-item navbar-wagon-link trait-vert trait-vert--hover" %>
+        <%= link_to "Portofolio", "#portofolio", class: "navbar-wagon-item navbar-wagon-link trait-vert trait-vert--hover" %>
+        <%= link_to "Contact", "#contact", class: "navbar-wagon-item navbar-wagon-link trait-vert trait-vert--hover" %>
 
         <!-- Avatar with dropdown menu -->
         <!--<div class="navbar-wagon-item">
@@ -48,15 +48,28 @@
     <!-- Dropdown list appearing on mobile only -->
     <div class="navbar-wagon-item hidden-md hidden-lg">
       <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+        <div class="navbar-wagon margin-bottom-30">
+          <%= link_to root_path, class: "navbar-wagon-brand", id: "sidenav-logo" do %>
+            <%= image_tag("logo-detoure-gris.svg", class: "logo-gris") %>
+          <% end %>
+          <a href="javascript:void(0)" class="closebtn" id="closeNav"><img src="assets/fermer_sidenav.svg" alt="Fermer le menu" style="height: 20px"></a>
+        </div>
         <%= link_to "À propos", "#about", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Services", "#service", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Portofolio", "#portofolio", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Contact", "#contact", class: "navbar-wagon-item navbar-wagon-link" %>
+        <a href="" class="navbar-wagon-item navbar-wagon-link green"><img src="assets/icone_verte.svg" alt="Découvrez l'univers d'Avem Création" class="margin-right-15" style="height: 20px">Découvrir Avem</a>
       </div>
 
       <!-- Use any element to open the sidenav -->
-      <span id="openNav"><i class="fa fa-bars dropdown-toggle"></i></span>
+      <span id="openNav" class="dynamic-logo">
+        <div class="dynamic-logo-item dynamic-logo-item-blanc">
+          <img src="assets/menu_rond_blanc.svg" alt="Ouvrir le menu" style="height: 20px" class="logo-blanc">
+        </div>
+        <div class="dynamic-logo-item dynamic-logo-item-gris">
+          <img src="assets/menu_rond_vert.svg" alt="Ouvrir le menu" style="height: 20px" class="logo-gris">
+        </div>
+      </span>
 
 
 
