@@ -52,22 +52,24 @@
           <%= link_to root_path, class: "navbar-wagon-brand", id: "sidenav-logo" do %>
             <%= image_tag("logo-detoure-gris.svg", class: "logo-gris") %>
           <% end %>
-          <a href="javascript:void(0)" class="closebtn" id="closeNav"><img src="assets/fermer_sidenav.svg" alt="Fermer le menu" style="height: 20px"></a>
+          <a href="javascript:void(0)" class="closebtn" id="closeNav"><%= image_tag("fermer_sidenav.svg", style: "height: 20px", alt: "Fermer le menu") %></a>
         </div>
         <%= link_to "À propos", "#about", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Services", "#service", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Portofolio", "#portofolio", class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Contact", "#contact", class: "navbar-wagon-item navbar-wagon-link" %>
-        <a href="" class="navbar-wagon-item navbar-wagon-link green"><img src="assets/icone_verte.svg" alt="Découvrez l'univers d'Avem Création" class="margin-right-15" style="height: 20px">Découvrir Avem</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link green">
+          <%= image_tag("icone_verte.svg", style: "height: 20px", alt: "Découvrez l'univers d'Avem Création", class: "margin-right-15") %>
+        Découvrir Avem</a>
       </div>
 
       <!-- Use any element to open the sidenav -->
       <span id="openNav" class="dynamic-logo">
         <div class="dynamic-logo-item dynamic-logo-item-blanc">
-          <img src="assets/menu_rond_blanc.svg" alt="Ouvrir le menu" style="height: 20px" class="logo-blanc">
+          <%= image_tag("menu_rond_blanc.svg", style: "height: 20px", alt: "Ouvrir le menu", class: "logo-blanc") %>
         </div>
         <div class="dynamic-logo-item dynamic-logo-item-gris">
-          <img src="assets/menu_rond_vert.svg" alt="Ouvrir le menu" style="height: 20px" class="logo-gris">
+          <%= image_tag("menu_rond_vert.svg", style: "height: 20px", alt: "Ouvrir le menu", class: "logo-gris") %>
         </div>
       </span>
 
