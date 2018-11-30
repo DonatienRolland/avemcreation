@@ -1,5 +1,6 @@
 <%= render 'shared/btn_decouvrir_avem' %>
 
+
 <div class="ecran relative no-margin" id="home">
   <div class="flex" style="flex-direction: column; justify-content: center;">
     <h1 class="green margin-bottom-30 no-margin">Entre dans un collectif qui te comprends</h1>
@@ -27,12 +28,12 @@
   <div class="row">
     <div class="col-lg-2 col-xs-12 menu-ecran">
       <h4 class="trait-vert no-margin" style="width: fit-content;">À propos</h4>
-      <h4 class="col-md-7 no-padding">Imaginer, créer, vous accompagner dans un de vos projets.</h4>
+      <h4 class="col-md-7 no-padding margin-top-45" style="font-size: 36px">Imaginer, créer, vous accomp-<br>agner</h4>
     </div>
     <div class="col-lg-10 col-xs-12 menu-ecran">
       <hr class="trait-horizontal margin-bottom-30 margin-top-30-xs">
       <div class="column-count-2 column-count-xs-1">
-        <p>Nous sommes un collectif perfectionniste, entrepreneur, et spécialiste, qui aiment relever des défis au quotidien dans le domaine du développement d’application web et d’identité de marque. <br><br>Développers, designers, chargé de projet, quelques soit notre coeur de métier nous adorons ce que nous faisons, et mettons à votre profit notre expérience, savoir faire pour: désacraliser les technologies digitales en les rendant comprehensible et accessible, et, repenser l’approche du design en nous tenant toujours informés des dernieres tendances. <br>Chaque projet est l’occasion pour nous de vous accueillir au sein de notre collectif, en vous faisant vivre une expérience unique, dans lequel nous accompagnons, réflichissons, et concevons la meilleur solution qui convient à votre projet. <br><br>Contactez-nous aujourd'hui pour savoir comment nous pouvons vous aider à réaliser votre prochain projet.</p>
+        <p style="text-align: justify;">Nous sommes un collectif perfectionniste, entrepreneur, et spécialiste, qui aiment relever des défis au quotidien dans le domaine du développement d’application web et d’identité de marque. <br><br>Développers, designers, chargé de projet, quelques soit notre coeur de métier nous adorons ce que nous faisons, et mettons à votre profit notre expérience, savoir faire pour: désacraliser les technologies digitales en les rendant comprehensible et accessible, et, repenser l’approche du design en nous tenant toujours informés des dernieres tendances. <br>Chaque projet est l’occasion pour nous de vous accueillir au sein de notre collectif, en vous faisant vivre une expérience unique, dans lequel nous accompagnons, réflichissons, et concevons la meilleur solution qui convient à votre projet. <br><br>Contactez-nous aujourd'hui pour savoir comment nous pouvons vous aider à réaliser votre prochain projet.</p>
         <div class="video-player margin-top-30" style="text-align: right;">
           <img src="assets/logo-detoure-gris.svg" alt="" style="height: 50px">
         </div>
@@ -74,7 +75,7 @@
   <div class="row">
     <div class="col-lg-2 col-xs-12 align-center menu-ecran">
       <h4 class="trait-vert no-margin" style="width: fit-content;">Portofolio</h4>
-      <h4 class="col-md-7 no-padding">Fait avec passion</h4>
+      <h4 class="col-md-7 no-padding margin-top-45" style="font-size: 36px;">Fait avec passion</h4>
     </div>
 
     <div class="col-lg-10 col-xs-12 row no-margin-xs" id="carousel_portofolio" style="overflow-x: hidden; padding: 50px 0 0">
@@ -82,16 +83,40 @@
         <%= render "shared/item_portofolio" %>
       </div>
       <div class="item">
-        <%= render "shared/item_portofolio" %>
+        <div class="col-md-12">
+          <div class="image-portofolio">
+            <img src="assets/Portofolio/Site _ Il etait un costume.jpg" alt="">
+          </div>
+          <h3 style="text-align: center;">Test</h3>
+          <p class="p2" style="text-align: center;">Développers, designers, chargé de projet,</p>
+        </div>
       </div>
       <div class="item">
-        <%= render "shared/item_portofolio" %>
+        <div class="col-md-12">
+          <div class="image-portofolio">
+            <img src="assets/Portofolio/Site _ Image.jpg" alt="">
+          </div>
+          <h3 style="text-align: center;">Test</h3>
+          <p class="p2" style="text-align: center;">Développers, designers, chargé de projet,</p>
+        </div>
       </div>
       <div class="item">
-        <%= render "shared/item_portofolio" %>
+        <div class="col-md-12">
+          <div class="image-portofolio">
+            <img src="assets/Portofolio/T-shirt _ Origisme.jpg" alt="">
+          </div>
+          <h3 style="text-align: center;">Test</h3>
+          <p class="p2" style="text-align: center;">Développers, designers, chargé de projet,</p>
+        </div>
       </div>
       <div class="item">
-        <%= render "shared/item_portofolio" %>
+        <div class="col-md-12">
+          <div class="image-portofolio">
+            <img src="assets/Portofolio/Carte de visite _ NJC.jpg" alt="">
+          </div>
+          <h3 style="text-align: center;">Test</h3>
+          <p class="p2" style="text-align: center;">Développers, designers, chargé de projet,</p>
+        </div>
       </div>
     </div>
 
@@ -182,7 +207,7 @@
       <p>Vous voulez postuler</p>
       <p class="white">jobs@avemcreation.com</p>
   </div>
-  <div class="col-xs-12 col-md-4 col-md-offset-4 row no-padding">
+  <div class="col-xs-12 col-md-4 col-md-offset-4 no-padding">
     <a href="https://github.com/AvemCreation" target="_blank" class="text-center col-xs-2 col-xs-offset-1"><i class="fab fa-github-square white"></i></a>
     <a href="https://www.behance.net/erwan0639" target="_blank" class="text-center col-xs-2"><i class="fab fa-behance white"></i></a>
     <a href="https://www.youtube.com/channel/UCRy3Sg0x3P1IaGIwFj8vQIg" target="_blank" class="text-center col-xs-2"><i class="fab fa-youtube white"></i></a>
@@ -191,8 +216,6 @@
   </div>
   </footer>
 </div>
-
-
 
 
 
