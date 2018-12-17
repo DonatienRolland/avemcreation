@@ -2,7 +2,7 @@ var scrollStop = require('../components/scrollStop').scrollStop
 
 // CODE FONCTIONNEL
 $(document).ready(function(){
-  var scrollIni = 0;
+  // var scrollIni = 0;
   let mobile = window.innerWidth < 800
   if (!mobile) {
     scrollStop(function () {
