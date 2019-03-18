@@ -1,0 +1,2 @@
+class FormLess < ApplicationRecord
+end

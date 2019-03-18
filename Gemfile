@@ -32,3 +32,4 @@ end
 
 
 gem "pundit"
+gem 'activerecord-session_store'
