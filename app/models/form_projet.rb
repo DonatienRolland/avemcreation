@@ -1,0 +1,2 @@
+class FormProjet < ApplicationRecord
+end

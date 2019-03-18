@@ -1,0 +1,19 @@
+  <%= simple_form_for less_form do |f| %>
+    <div class="selected">
+      <%= f.label :get_it, label: "Avec le texte et la vidéo as tu compris le projet ? " %>
+      <%= f.collection_radio_buttons :get_it, [['Oui c’est super clair ','Oui c’est super clair '], ['Mouai','Mouai'], ['Trop compliqué','Trop compliqué']], :first, :last %>
+    </div>
+    <div class="selected">
+      <%= f.label :user_path, label: "Le parcours utilisateur te parles (comme on se balade sur le site) ?" %>
+      <%= f.collection_radio_buttons :user_path, [['Oui c’est déjà familiers','Oui c’est déjà familiers'], ['J’ai compris','J’ai compris'], ['c’est un peu flou','c’est un peu flou']], :first, :last %>
+    </div>
+    <div class="selected">
+      <%= f.label :user_path, label: "Aimerais-tu suivre tes premières recettes ?" %>
+      <%= f.collection_radio_buttons :user_path, [['Oui j’adorais ça','Oui j’adorais ça'], ['J’attends de voir','J’attends de voir'], ['C’est pas mon truc','C’est pas mon truc']], :first, :last %>
+    </div>
+      <div class="selected">
+      <%= f.label :user_path, label: "Voudrais tu proposer tes propres recettes ?" %>
+      <%= f.collection_radio_buttons :user_path, [['Oui j’en ai plein en tête','Oui j’en ai plein en tête'], ['Oula, pas tout de suite','Oula, pas tout de suite'], ['Non pas vraiment','Non pas vraiment']], :first, :last %>
+    </div>
+    <%= f.submit "Suivant" %>
+  <% end %>

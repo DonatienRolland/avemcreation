@@ -1,0 +1,105 @@
+<%= simple_form_for @less_form, remote: true  do |f| %>
+  <!-- <#% if step === "start"  %> -->
+    <divc class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <%= f.label :like_it, label: "As tu aimé le projet en général ?" %>
+        <% session[:step] = "like_it" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :like_it, [['Oui top','Oui top'], ['Mouai','Mouai'], ['Pas trop','Pas trop']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  <!-- <#% elsif step === "get_it" %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "get_it" %>
+        <%= f.label :get_it, label: "Avec le texte et la vidéo as tu compris le projet ? " %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :get_it, [['Super clair ','Super clair '], ['Mouai','Mouai'], ['Trop compliqué','Trop compliqué']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  <!-- <#% elsif step === "user_path" %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "user_path" %>
+        <%= f.label :user_path, label: "Le parcours utilisateur te parles (comme on se balade sur le site) ?" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :user_path, [['Oui c’est déjà familiers','Oui c’est déjà familiers'], ['J’ai compris','J’ai compris'], ['Peu flou','Peu flou']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  <!-- <#% elsif step === "follow_recipe" %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "follow_recipe" %>
+        <%= f.label :follow_recipe, label: "Aimerais-tu suivre tes premières recettes ?" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :follow_recipe, [['Oui j’adorais ça','Oui j’adorais ça'], ['J’attends de voir','J’attends de voir'], ['C’est pas mon truc','C’est pas mon truc']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+
+  <!-- <#% elsif step === "suggest_recipe" %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "suggest_recipe" %>
+        <%= f.label :suggest_recipe, label: "Voudrais tu proposer tes propres recettes ?" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :suggest_recipe, [['Oui j’en ai plein en tête','Oui j’en ai plein en tête'], ['Oula, pas tout de suite','Oula, pas tout de suite'], ['Non pas vraiment','Non pas vraiment']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  <!-- <#% elsif step === "feed_back" %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "feed_back" %>
+        <%= f.label :feed_back, label: "Des petits feed-backs ?" %>
+        <div class="text-answers">
+          <%= f.input :feed_back, label: false, row: 4, as: :text %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  <!-- <#% end %> -->
+  <div class="hidden">
+    <%= f.submit "Suivant" %>
+  </div>
+<% end %>
+
+
