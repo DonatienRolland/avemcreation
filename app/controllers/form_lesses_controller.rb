@@ -34,6 +34,6 @@ class FormLessesController < ApplicationController
 
 private
   def form_params
-    params.require(:form_less).permit(:like_it, :get_it, :user_path, :follow_recipe, :suggest_recipe, :feed_back)
+    params.require(:form_less).permit(:like_it, :get_it, :user_path, :follow_recipe, :suggest_recipe, :feed_back, :email, :firstname)
   end
 end
