@@ -4,24 +4,24 @@ import '../components/sidenav';
 
 // import '../components/listeDefilementAuto';
 
-// import '../components/smoothScroll';
+import '../components/smoothScroll';
 
-// import '../components/carouselPortofolio';
+import '../components/carouselPortofolio';
 
-// import '../components/dynamicNavbar';
+import '../components/dynamicNavbar';
 
-// import '../components/forceScroll';
+import '../components/forceScroll';
 
-// import '../components/carouselGrafikart';
+import '../components/carouselGrafikart';
 
-// import { openOnglet } from '../components/toggableVerticalTabs';
-// openOnglet();
+import { openOnglet } from '../components/toggableVerticalTabs';
+openOnglet();
 
-// import { changeColor } from '../components/indicateurCarousel';
-// changeColor();
+import { changeColor } from '../components/indicateurCarousel';
+changeColor();
 
-// import { loadDynamicBannerText } from '../components/typedText';
-// loadDynamicBannerText();
+import { loadDynamicBannerText } from '../components/typedText';
+loadDynamicBannerText();
 
 // import { calculEltHauteur } from '../components/calculEltHauteur';
 // calculEltHauteur();

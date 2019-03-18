@@ -1,5 +1,4 @@
 
-
 <div id="container-less">
   <h2 style="text-align: center; padding: 3vh">Projet super confidentiel, enjoy c'est du inédit</h2>
   <div class="grid-less">
@@ -59,15 +58,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
   <script>
     const answers = Array.from(document.querySelectorAll('.answers'))
     answers.forEach((answer) => {
@@ -105,6 +95,15 @@
         }
       })
     })
+
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.querySelector(".navbar-white-bg").style.padding = "15px 55px 0";
+      } else {
+        document.querySelector(".navbar-white-bg").style.padding = "50px 125px 0";
+      }
+    }
 
   </script>
 </div>

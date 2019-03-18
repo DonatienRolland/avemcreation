@@ -348,17 +348,19 @@ class Carousel {
 
 }
 
-let onReady = function () {
+if (document.querySelector('#carousel_portofolio')) {
+  let onReady = function () {
 
-  new Carousel(document.querySelector('#carousel_portofolio'), {
-      slidesVisible: 3,
-      slidesToScroll: 1,
-      infinite: true
-  })
+    new Carousel(document.querySelector('#carousel_portofolio'), {
+        slidesVisible: 3,
+        slidesToScroll: 1,
+        infinite: true
+    })
 
+  }
+  if (document.readyState !== 'loading') {
+    onReady()
+  }
+  document.addEventListener('DOMContentLoaded', onReady)
 }
 
-if (document.readyState !== 'loading') {
-  onReady()
-}
-document.addEventListener('DOMContentLoaded', onReady)
