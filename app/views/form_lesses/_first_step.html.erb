@@ -1,5 +1,20 @@
 <%= simple_form_for @less_form, remote: true  do |f| %>
   <!-- <#% if step === "start"  %> -->
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "email" %>
+        <%= f.label :firstname, label: "Comment t'appeles tu ?" %>
+        <div class="text-answers">
+          <%= f.input :firstname, label: false, placeholder: "Sophie ? Jules ?" %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
     <divc class="question-card flex-container hidden">
       <div class="previous btn-question">
         <i class="fas fa-chevron-left"></i>
@@ -89,11 +104,26 @@
         <% session[:step] = "feed_back" %>
         <%= f.label :feed_back, label: "Des petits feed-backs ?" %>
         <div class="text-answers">
-          <%= f.input :feed_back, label: false, row: 4, as: :text %>
+          <%= f.input :feed_back, label: false, row: 4, as: :text, placeholder: "Tu n'aimes pas le parcours. On est déjà en retard. On va pas assez vite etc etc" %>
         </div>
       </div>
       <div class="next btn-question">
         <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <h3 style="font-size: 20px;">Merci beaucoup pour ton aide !</h3>
+        <p>Comme tu l'as vu nous sommes encore qu'au tout début ! On va surement avoir encore besoin de toi dans les prochains mois. Alors si c'est ok peux tu nous laisser ton adresse email pour te recontacter ? </p>
+        <div class="text-answers">
+          <%= f.input :email, label: false, placeholder: "superami@avemcreation.com" %>
+        </div>
+      </div>
+      <div class="next btn-question" data-toggle="modal" data-target="#exampleModal">
+        <p class="final">Envoyer</p>
       </div>
     </div>
   <!-- <#% end %> -->

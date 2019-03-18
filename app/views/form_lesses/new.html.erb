@@ -33,6 +33,41 @@
   <div id="formulaire-less">
       <%= render 'first_step' %>
   </div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Merci pour ton aide !</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <script>
     const answers = Array.from(document.querySelectorAll('.answers'))
     answers.forEach((answer) => {
@@ -53,6 +88,9 @@
         if (nexts.length != index + 1){
           questions[index].classList.add('hidden');
           questions[index + 1].classList.remove('hidden');
+        } else {
+          questions[index].classList.add('hidden');
+          questions[1].classList.remove('hidden');
         }
       })
     })
