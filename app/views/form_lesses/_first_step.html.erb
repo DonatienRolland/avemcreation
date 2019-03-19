@@ -5,10 +5,40 @@
         <i class="fas fa-chevron-left"></i>
       </div>
       <div class="question">
+        <% session[:step] = "recette" %>
+        <%= f.label :recette, label: "Tu préfères le terme Astuce ou Recette :" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :recette, [['Recette','Recette'], ['Astuce','Astuce'], ['Autre','Autre']], :first, :last %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
         <% session[:step] = "email" %>
         <%= f.label :firstname, label: "Comment t'appeles tu ?" %>
         <div class="text-answers">
           <%= f.input :firstname, label: false, placeholder: "Sophie ? Jules ?" %>
+        </div>
+      </div>
+      <div class="next btn-question">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+    <div class="question-card flex-container hidden">
+      <div class="previous btn-question">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="question">
+        <% session[:step] = "name" %>
+        <%= f.label :name, label: "Comme nom de plateforme tu préfères :" %>
+        <div class="answers">
+          <%= f.collection_radio_buttons :name, [['Less','Less'], ['Makebyou','Makebyou'], ['Creathome','Creathome']], :first, :last %>
         </div>
       </div>
       <div class="next btn-question">
@@ -53,7 +83,7 @@
       </div>
       <div class="question">
         <% session[:step] = "user_path" %>
-        <%= f.label :user_path, label: "Le parcours utilisateur te parles (comme on se balade sur le site) ?" %>
+        <%= f.label :user_path, label: "Le parcours utilisateur te parles (comment on se balade sur le site) ?" %>
         <div class="answers">
           <%= f.collection_radio_buttons :user_path, [['Oui c’est déjà familiers','Oui c’est déjà familiers'], ['J’ai compris','J’ai compris'], ['Peu flou','Peu flou']], :first, :last %>
         </div>
@@ -117,10 +147,10 @@
       </div>
       <div class="question">
         <h3 style="font-size: 20px;">Merci beaucoup pour ton aide !</h3>
-        <p>Comme tu l'as vu nous sommes encore qu'au tout début ! On va surement avoir encore besoin de toi dans les prochains mois. Alors si c'est ok peux tu nous laisser ton adresse email pour te recontacter ? </p>
         <div class="text-answers">
           <%= f.input :email, label: false, placeholder: "superami@avemcreation.com" %>
         </div>
+        <p>Comme tu l'as vu nous sommes encore qu'au tout début ! On va surement avoir encore besoin de toi dans les prochains mois. Alors si c'est ok peux tu nous laisser ton adresse email pour te recontacter ? </p>
       </div>
       <div class="next btn-question" data-toggle="modal" data-target="#exampleModal">
         <p class="final">Envoyer</p>
