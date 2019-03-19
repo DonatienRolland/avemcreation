@@ -47,7 +47,9 @@
       margin: 10px;
     }
   }
-
+  .question-card {
+    min-height: 260px !important;
+  }
 }
 .iframe-container {
   padding: 2%;
@@ -82,7 +84,6 @@
   grid-row: 1 / span 1;
 }
 .question-card {
-  min-height: 130px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -164,7 +165,6 @@ input[type="radio"]:checked+label {
     top: 20px;
     right: 20px;
   }
-
   .modal {
     position: relative;
   }

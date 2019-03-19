@@ -40,7 +40,6 @@
     <a href="#about" class="navbar-wagon-item"><p class="scroll hidden-xs">scroll</p></a>
   </div>
 </div>
-<%= link_to 'Test', new_form_less_path %>
 
 <div class="ecran" id="about">
   <div class="row">
@@ -218,7 +217,8 @@
   </div>
   <footer class="row">
   <div class="col-xs-12 col-md-4 margin-bottom-15-xs">
-    <p class="no-margin">Discutons ensemble</p>
+    <p><%= link_to 'Discutons ensemble', new_form_less_path, class:"no-margin", style:"color: white" %></p>
+    <!-- <p class="no-margin">Discutons ensemble</p> -->
     <p class="white no-margin">+33 9 77 21 95 03</p>
   </div>
   <div class="col-xs-12 col-md-4 hidden">
