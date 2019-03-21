@@ -118,6 +118,9 @@
   justify-content: space-between;
   margin-top: 10px;
   align-items: center;
+  span {
+    margin: 0 5px;
+  }
 }
 
 .collection_radio_buttons {
@@ -142,6 +145,10 @@ input[type="radio"]:checked+label {
 
 
 .text-answers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
   textarea.form-control {
     background-color: white;
     color: $green;
@@ -154,6 +161,9 @@ input[type="radio"]:checked+label {
   }
   p {
     font-size: 12px;
+  }
+  .form-group {
+    width: 100%;
   }
 }
 

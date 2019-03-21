@@ -18,12 +18,12 @@
 
       <p>Bref des heures et des heures perdues et une démotivation assurée !</p>
 
-      <p>Si maintenant je vous disais, de trouver un produit de second mains ? Vous me dites « le boncoin ».
+      <p>Si maintenant je vous disais, de trouver un produit de seconde main ? Vous me dites « le boncoin ».
       La recette du gâteau au chocolat ? « marmiton ». Le meilleur resto d’Oslo ? « tripadvasior » </p>
 
       <p>Et redonner une seconde vie à  un produit vous me dites ? « ... »</p>
 
-      <p>Non on dira Less !</p>
+      <p>Nous on dira Less !</p>
 
       <p><strong>Less est la première plateforme d'astuce pour faire autant avec moins</strong></p>
 
@@ -90,7 +90,7 @@
           questions[index + 1].classList.remove('hidden');
         } else {
           questions[index].classList.add('hidden');
-          questions[1].classList.remove('hidden');
+          questions[0].classList.remove('hidden');
         }
       })
     })
@@ -114,6 +114,30 @@
         document.querySelector(".navbar-white-bg").style.padding = "50px 125px 0";
       }
     }
+
+    const selectedList = Array.from(document.getElementById('names_choice').getElementsByTagName('input'))
+    const autre = document.getElementById('form_less_recette')
+    const choix = document.querySelectorAll('#form_less_recette')[1]
+
+    selectedList.forEach((selected) => {
+      selected.addEventListener('click', function(){ autre.value = null })
+      selected.addEventListener("change", function(){
+        if (selected.checked) {
+          choix.value = selected.value
+        }
+      })
+    })
+    autre.addEventListener('keydown', function(){
+      selectedList.forEach((selected) => {
+        selected.checked = false
+      })
+    })
+
+    autre.addEventListener("change", function(){
+      if (autre.value != null) {
+        choix.value = autre.value
+      }
+    })
 
   </script>
 </div>
