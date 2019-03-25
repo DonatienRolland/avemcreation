@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'less', to: 'pages#less', as: 'less'
 
-  resources :form_lesses, only: [:create, :update, :new]
+  resources :form_lesses, only: [:create, :update, :new, :index]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do

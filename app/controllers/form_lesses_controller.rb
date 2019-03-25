@@ -14,6 +14,10 @@ class FormLessesController < ApplicationController
     end
   end
 
+  def index
+    @less_forms = FormLess.all.where.not(like_it: nil)
+  end
+
   def new
     @less_form = FormLess.find_or_create_by(id_adress: request.ip)
   end

@@ -1,0 +1,49 @@
+<div id="container-less">
+  <h2 style="text-align: center; padding: 3vh">Projet super confidentiel, enjoy c'est du inédit</h2>
+  <h2 style="margin: 2% "><%= pluralize(@less_forms.count, 'Formulaire a', 'Formulaires ont')%> été réalisé</h2>
+
+
+<table style="width:100%">
+  <tr>
+    <th></th>
+    <th>Prénom</th>
+    <th>email</th>
+    <th>Like It</th>
+    <th>Comprit</th>
+    <th>Parcours</th>
+    <th>Suivre une recette</th>
+    <th>Proposer une recette</th>
+    <th>Nom</th>
+    <th>Titre</th>
+    <th>Feed back</th>
+  </tr>
+  <% @less_forms.each do |form| %>
+    <tr>
+      <td><%= form.id %></td>
+      <td><%= form.firstname %></td>
+      <td><%= form.email %></td>
+      <td><%= form.like_it %></td>
+      <td><%= form.get_it %></td>
+      <td><%= form.user_path %></td>
+      <td><%= form.follow_recipe %></td>
+      <td><%= form.suggest_recipe %></td>
+      <td><%= form.name %></td>
+      <td><%= form.recette %></td>
+      <td><%= form.feed_back %></td>
+    </tr>
+
+  <% end %>
+</table>
+
+
+</div>
+
+<style>
+  table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+      padding: 15px;
+      text-align: left;
+      border-spacing: 5px;
+}
+</style>
