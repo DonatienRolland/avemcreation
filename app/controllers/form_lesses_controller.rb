@@ -15,7 +15,7 @@ class FormLessesController < ApplicationController
   end
 
   def index
-    @less_forms = FormLess.all.where.not(like_it: nil)
+    @less_forms = FormLess.all.where.not('like_it LIKE ?', "")
   end
 
   def new
