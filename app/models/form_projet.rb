@@ -1,2 +1,0 @@
-class FormProjet < ApplicationRecord
-end

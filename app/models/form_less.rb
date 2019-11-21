@@ -1,2 +1,0 @@
-class FormLess < ApplicationRecord
-end
